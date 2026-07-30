@@ -130,9 +130,48 @@
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* ── Floating Keywords (bottom-to-top) ── */
+    @keyframes floatUp {
+      0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10%  { opacity: 0.4; }
+      90%  { opacity: 0.4; }
+      100% { transform: translateY(-120vh) rotate(8deg); opacity: 0; }
+    }
+
+    .floating-keyword {
+      position: fixed;
+      bottom: -60px;
+      white-space: nowrap;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #818cf8;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 0;
+      animation: floatUp linear infinite;
+      text-shadow: 0 0 20px rgba(99,102,241,0.08);
+      will-change: transform, opacity;
+    }
+
+    .floating-keyword.purple { color: #a855f7; text-shadow: 0 0 20px rgba(168,85,247,0.08); }
+    .floating-keyword.pink   { color: #ec4899; text-shadow: 0 0 20px rgba(236,72,153,0.08); }
+    .floating-keyword.cyan   { color: #06b6d4; text-shadow: 0 0 20px rgba(6,182,212,0.08); }
+    .floating-keyword.emerald { color: #10b981; text-shadow: 0 0 20px rgba(16,185,129,0.08); }
+    .floating-keyword.amber  { color: #f59e0b; text-shadow: 0 0 20px rgba(245,158,11,0.08); }
+    .floating-keyword.rose   { color: #f43f5e; text-shadow: 0 0 20px rgba(244,63,94,0.08); }
+    .floating-keyword.indigo { color: #6366f1; text-shadow: 0 0 20px rgba(99,102,241,0.08); }
+    .floating-keyword.violet { color: #8b5cf6; text-shadow: 0 0 20px rgba(139,92,246,0.08); }
+
+    @media (max-width: 768px) {
+      .floating-keyword { font-size: 0.8rem; }
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- ═══════════════ FLOATING KEYWORDS (bottom-to-top) ═══════════════ -->
+  <div id="floating-keywords-container"></div>
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/80">
@@ -591,6 +630,91 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════ FLOATING KEYWORDS SCRIPT ═══════════════ -->
+  <script>
+    (function() {
+      const keywords = [
+        { text: 'AWS',              color: 'amber'   },
+        { text: 'Microsoft Azure',  color: 'cyan'    },
+        { text: 'GCP',              color: 'emerald' },
+        { text: 'Agentic RAG',      color: 'indigo'  },
+        { text: 'Graph RAG',        color: 'purple'  },
+        { text: 'Computer Vision',  color: 'pink'    },
+        { text: 'STT',              color: 'rose'    },
+        { text: 'TTS',              color: 'violet'  },
+        { text: 'Governance',       color: 'indigo'  },
+        { text: 'LangChain',        color: 'emerald' },
+        { text: 'LangGraph',        color: 'cyan'    },
+        { text: 'CrewAI',           color: 'purple'  },
+        { text: 'MCP',              color: 'indigo'  },
+        { text: 'ChromaDB',         color: 'amber'   },
+        { text: 'OpenAI',           color: 'emerald' },
+        { text: 'Pydantic AI',      color: 'cyan'    },
+        { text: 'Fine-Tuning',      color: 'pink'    },
+        { text: 'RAG',              color: 'violet'  },
+        { text: 'Vector DB',        color: 'rose'    },
+        { text: 'Dify',             color: 'purple'  },
+        { text: 'OpenWorker',       color: 'pink'    },
+        { text: 'Docker',           color: 'cyan'    },
+        { text: 'Kubernetes',       color: 'indigo'  },
+        { text: 'PostgreSQL',       color: 'amber'   },
+        { text: 'CI/CD',            color: 'emerald' },
+        { text: 'GenAI',            color: 'violet'  },
+        { text: 'LLMOps',           color: 'rose'    },
+        { text: 'Prompt Eng.',      color: 'indigo'  },
+        { text: 'Embeddings',       color: 'purple'  },
+        { text: 'Transformers',     color: 'pink'    },
+        { text: 'AutoGen',          color: 'cyan'    },
+        { text: 'SmolAgents',      color: 'emerald' },
+        { text: 'Mem0',             color: 'amber'   },
+        { text: 'MLflow',           color: 'rose'    },
+        { text: 'Firecrawl',        color: 'violet'  },
+        { text: 'Cognee',           color: 'indigo'  },
+      ];
+
+      const container = document.getElementById('floating-keywords-container');
+      const maxOnScreen = 14;
+      let activeCount = 0;
+
+      function spawnKeyword() {
+        if (activeCount >= maxOnScreen) return;
+
+        const kw = keywords[Math.floor(Math.random() * keywords.length)];
+        const el = document.createElement('span');
+        el.className = 'floating-keyword ' + kw.color;
+        el.textContent = kw.text;
+
+        // Random horizontal position (5% to 90% of viewport width)
+        const left = 5 + Math.random() * 85;
+        el.style.left = left + 'vw';
+
+        // Random duration between 12s and 28s
+        const duration = 12 + Math.random() * 16;
+        el.style.animationDuration = duration + 's';
+
+        // Random font size variation
+        const size = 0.85 + Math.random() * 0.6;
+        el.style.fontSize = size + 'rem';
+
+        activeCount++;
+        el.addEventListener('animationend', function() {
+          el.remove();
+          activeCount--;
+        });
+
+        container.appendChild(el);
+      }
+
+      // Spawn initial batch with stagger
+      for (let i = 0; i < 6; i++) {
+        setTimeout(spawnKeyword, i * 800);
+      }
+
+      // Continuously spawn new keywords
+      setInterval(spawnKeyword, 1800);
+    })();
+  </script>
 
 </body>
 </html>
