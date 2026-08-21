@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakti Prasad Mohapatra | AI Architect</title>
-  <meta name="description" content="Personal portfolio of Shakti Prasad Mohapatra — Agentic AI / GenAI Architect, Open Source Contributor" />
+  <title>Shakti Prasad Mohapatra | Agentic AI & GenAI Architect</title>
+  <meta name="description" content="Agentic AI / GenAI Architect with 10+ years in IT. Building production-grade agent systems, contributing to open-source AI infrastructure, and designing governance frameworks for enterprise AI." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
@@ -12,68 +12,29 @@
 
     * { font-family: 'Inter', sans-serif; }
 
-    /* ── Animations ── */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-40px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(40px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-12px); }
-    }
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.15); }
-      50%      { box-shadow: 0 0 40px rgba(99,102,241,0.3); }
-    }
-    @keyframes gradientShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to   { width: 100%; }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(60px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    @keyframes shimmer {
-      0%   { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.15); } 50% { box-shadow: 0 0 40px rgba(99,102,241,0.3); } }
+    @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 
     .animate-fade-up    { animation: fadeInUp 0.8s ease-out forwards; }
     .animate-fade-left  { animation: fadeInLeft 0.8s ease-out forwards; }
     .animate-fade-right { animation: fadeInRight 0.8s ease-out forwards; }
     .animate-float      { animation: float 4s ease-in-out infinite; }
-    .animate-glow      { animation: pulseGlow 3s ease-in-out infinite; }
-    .animate-gradient  { background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
-    .animate-slide-up  { animation: slideUp 0.7s ease-out forwards; }
-    .animate-scale-in  { animation: scaleIn 0.5s ease-out forwards; }
-    .animate-shimmer   { background-size: 200% 100%; animation: shimmer 3s infinite; }
+    .animate-glow       { animation: pulseGlow 3s ease-in-out infinite; }
+    .animate-gradient   { background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
+    .animate-slide-up   { animation: slideUp 0.7s ease-out forwards; }
+    .animate-scale-in   { animation: scaleIn 0.5s ease-out forwards; }
 
     .typing-text {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid #6366f1;
-      animation: typing 3s steps(40) 1s forwards, blink 0.8s step-end infinite;
-      width: 0;
+      overflow: hidden; white-space: nowrap; border-right: 3px solid #6366f1;
+      animation: typing 3s steps(40) 1s forwards, blink 0.8s step-end infinite; width: 0;
     }
 
     .stagger-1 { animation-delay: 0.1s; opacity: 0; }
@@ -83,116 +44,64 @@
     .stagger-5 { animation-delay: 0.5s; opacity: 0; }
     .stagger-6 { animation-delay: 0.6s; opacity: 0; }
 
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px -12px rgba(99,102,241,0.2);
-    }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(99,102,241,0.2); }
 
-    .gradient-border {
-      position: relative;
-      border-radius: 1rem;
-      overflow: hidden;
-    }
+    .gradient-border { position: relative; border-radius: 1rem; overflow: hidden; }
     .gradient-border::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 2px;
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 2px;
       background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
+      -webkit-mask-composite: xor; mask-composite: exclude;
     }
 
-    .skill-tag {
-      transition: all 0.3s ease;
-    }
-    .skill-tag:hover {
-      transform: scale(1.08);
-      box-shadow: 0 4px 12px rgba(99,102,241,0.2);
-    }
+    .skill-tag { transition: all 0.3s ease; }
+    .skill-tag:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(99,102,241,0.2); }
 
-    .project-card {
-      opacity: 0;
-      animation: slideUp 0.7s ease-out forwards;
-    }
+    .project-card { opacity: 0; animation: slideUp 0.7s ease-out forwards; }
 
-    .progress-bar {
-      transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-    /* ── Floating Keywords (bottom-to-top) ── */
     @keyframes floatUp {
-      0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10%  { opacity: 0.4; }
-      90%  { opacity: 0.4; }
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.4; } 90% { opacity: 0.4; }
       100% { transform: translateY(-120vh) rotate(8deg); opacity: 0; }
     }
-
     .floating-keyword {
-      position: fixed;
-      bottom: -60px;
-      white-space: nowrap;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #818cf8;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 0;
-      animation: floatUp linear infinite;
-      text-shadow: 0 0 20px rgba(99,102,241,0.08);
-      will-change: transform, opacity;
+      position: fixed; bottom: -60px; white-space: nowrap; font-size: 1rem; font-weight: 600;
+      color: #818cf8; opacity: 0; pointer-events: none; z-index: 0;
+      animation: floatUp linear infinite; text-shadow: 0 0 20px rgba(99,102,241,0.08); will-change: transform, opacity;
     }
-
-    .floating-keyword.purple { color: #a855f7; text-shadow: 0 0 20px rgba(168,85,247,0.08); }
-    .floating-keyword.pink   { color: #ec4899; text-shadow: 0 0 20px rgba(236,72,153,0.08); }
-    .floating-keyword.cyan   { color: #06b6d4; text-shadow: 0 0 20px rgba(6,182,212,0.08); }
-    .floating-keyword.emerald { color: #10b981; text-shadow: 0 0 20px rgba(16,185,129,0.08); }
-    .floating-keyword.amber  { color: #f59e0b; text-shadow: 0 0 20px rgba(245,158,11,0.08); }
-    .floating-keyword.rose   { color: #f43f5e; text-shadow: 0 0 20px rgba(244,63,94,0.08); }
-    .floating-keyword.indigo { color: #6366f1; text-shadow: 0 0 20px rgba(99,102,241,0.08); }
-    .floating-keyword.violet { color: #8b5cf6; text-shadow: 0 0 20px rgba(139,92,246,0.08); }
-
-    @media (max-width: 768px) {
-      .floating-keyword { font-size: 0.8rem; }
-    }
+    .floating-keyword.purple { color: #a855f7; } .floating-keyword.pink { color: #ec4899; }
+    .floating-keyword.cyan { color: #06b6d4; } .floating-keyword.emerald { color: #10b981; }
+    .floating-keyword.amber { color: #f59e0b; } .floating-keyword.rose { color: #f43f5e; }
+    .floating-keyword.indigo { color: #6366f1; } .floating-keyword.violet { color: #8b5cf6; }
+    @media (max-width: 768px) { .floating-keyword { font-size: 0.8rem; } }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
-  <!-- ═══════════════ FLOATING KEYWORDS (bottom-to-top) ═══════════════ -->
   <div id="floating-keywords-container"></div>
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/80">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-        rkfshakti
-      </a>
+      <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">rkfshakti</a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
         <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
-        <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
-        <a href="#stats" class="hover:text-indigo-600 transition-colors">Stats</a>
+        <a href="#architecture" class="hover:text-indigo-600 transition-colors">Architecture</a>
+        <a href="#opensource" class="hover:text-indigo-600 transition-colors">Open Source</a>
+        <a href="#governance" class="hover:text-indigo-600 transition-colors">Governance</a>
         <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="https://github.com/sponsors/rkfshakti" target="_blank"
-           class="flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 border border-pink-200 text-pink-600 text-sm font-medium hover:bg-pink-100 transition-all">
+        <a href="https://github.com/sponsors/rkfshakti" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 border border-pink-200 text-pink-600 text-sm font-medium hover:bg-pink-100 transition-all">
           <i class="fas fa-heart"></i> Sponsor
         </a>
-        <a href="https://github.com/rkfshakti" target="_blank"
-           class="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-sm font-medium hover:bg-indigo-100 transition-all">
+        <a href="https://github.com/rkfshakti" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-sm font-medium hover:bg-indigo-100 transition-all">
           <i class="fab fa-github"></i> GitHub
         </a>
       </div>
@@ -201,7 +110,6 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-    <!-- Background effects -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl animate-float"></div>
       <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl animate-float" style="animation-delay: -2s;"></div>
@@ -211,14 +119,11 @@
     <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-sm font-medium mb-8 animate-fade-up stagger-1">
         <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-        Available for collaborations
+        Available for architecture engagements & collaborations
       </div>
 
       <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-up stagger-2">
-        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          Shakti Prasad
-        </span>
-        <br />
+        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Shakti Prasad</span><br />
         <span class="text-slate-800">Mohapatra</span>
       </h1>
 
@@ -227,35 +132,31 @@
       </div>
 
       <p class="text-slate-500 max-w-2xl mx-auto mb-10 text-lg animate-fade-up stagger-4">
-        Building intelligent systems, contributing to open source, and pushing the boundaries of what AI agents can do.
-        <span class="text-indigo-600 font-semibold">101+ PRs</span> across major AI projects.
+        10+ years building data-driven systems. Now architecting production-grade agent platforms —
+        from <span class="text-indigo-600 font-semibold">harness design</span> to <span class="text-purple-600 font-semibold">governance frameworks</span>.
+        Actively contributing to the open-source AI infrastructure that powers the next wave.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 animate-fade-up stagger-5">
-        <a href="#projects"
-           class="px-8 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:scale-105">
-          <i class="fas fa-code mr-2"></i>View My Work
+        <a href="#architecture" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:scale-105">
+          <i class="fas fa-sitemap mr-2"></i>Architecture Expertise
         </a>
-        <a href="https://github.com/sponsors/rkfshakti" target="_blank"
-           class="px-8 py-3.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold hover:shadow-lg hover:shadow-pink-500/30 transition-all hover:scale-105">
-          <i class="fas fa-heart mr-2"></i>Sponsor Me
+        <a href="#opensource" class="px-8 py-3.5 rounded-full border border-slate-300 text-slate-700 font-semibold hover:border-indigo-400 hover:text-indigo-600 transition-all">
+          <i class="fas fa-code-branch mr-2"></i>Open Source Work
         </a>
-        <a href="#contact"
-           class="px-8 py-3.5 rounded-full border border-slate-300 text-slate-700 font-semibold hover:border-indigo-400 hover:text-indigo-600 transition-all">
+        <a href="#contact" class="px-8 py-3.5 rounded-full border border-slate-300 text-slate-700 font-semibold hover:border-indigo-400 hover:text-indigo-600 transition-all">
           <i class="fas fa-envelope mr-2"></i>Get in Touch
         </a>
       </div>
 
-      <!-- Social links -->
       <div class="flex justify-center gap-6 mt-12 text-slate-400 animate-fade-up stagger-6">
         <a href="https://github.com/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors text-2xl"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/oneshaktimohapatra" target="_blank" class="hover:text-indigo-600 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
         <a href="https://x.com/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors text-2xl"><i class="fab fa-x-twitter"></i></a>
         <a href="https://github.com/sponsors/rkfshakti" target="_blank" class="hover:text-pink-500 transition-colors text-2xl"><i class="fas fa-heart"></i></a>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
       <i class="fas fa-chevron-down text-slate-400 text-xl"></i>
     </div>
@@ -266,34 +167,34 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">About Me</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Building the Future of AI
-        </h2>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Intelligence is the New Infrastructure</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-slate-600 leading-relaxed">
           <p class="animate-slide-up">
-            I'm an <span class="text-slate-800 font-semibold">Agentic AI / GenAI Architect</span> with a deep passion for
-            open-source software. My work spans across building intelligent agent systems, contributing to
-            foundational AI infrastructure, and crafting tools that make AI more accessible.
+            I'm an <span class="text-slate-800 font-semibold">Agentic AI / GenAI Architect</span> with over a decade in IT —
+            from business analyst to AI architect, always following the data. I've led cross-functional teams across the
+            US and Middle East, engaged C-suite stakeholders on AI strategy, and driven transformation in
+            <span class="text-indigo-600 font-medium">financial services</span>,
+            <span class="text-purple-600 font-medium">consumer goods</span>,
+            <span class="text-pink-600 font-medium">energy</span>, and
+            <span class="text-emerald-600 font-medium">healthcare</span>.
           </p>
           <p class="animate-slide-up" style="animation-delay: 0.1s;">
-            From <span class="text-indigo-600 font-medium">ChromaDB</span> to <span class="text-purple-600 font-medium">Dify</span>,
-            <span class="text-pink-600 font-medium">OpenWorker</span> to <span class="text-indigo-600 font-medium">LangChain</span> —
-            I contribute where it matters. My focus is on writing clean, correct, and maintainable Python code
-            that ships.
+            My MBA from <span class="text-slate-800 font-medium">Liverpool Business School, UK</span> wasn't to step away
+            from technology — it was to understand business problems deeply enough to solve them with it. The 10-day
+            process that becomes 2 hours. The 3% error rate that drops to under 0.5%. The alert noise cut by 30%.
           </p>
-          <div class="flex flex-wrap gap-3 pt-4 animate-slide-up" style="animation-delay: 0.2s;">
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 text-sm">
-              <i class="fas fa-check-circle text-xs"></i> 101+ PRs
-            </span>
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 text-purple-600 text-sm">
-              <i class="fas fa-check-circle text-xs"></i> 24 Repos
-            </span>
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-pink-50 text-pink-600 text-sm">
-              <i class="fas fa-check-circle text-xs"></i> Python Expert
-            </span>
+          <p class="animate-slide-up" style="animation-delay: 0.2s;">
+            Today I design the systems that make AI useful in production — not demos, not prototypes. The work that
+            turns a model into a <span class="text-indigo-600 font-semibold">reliable, observable, autonomous system</span>
+            that enterprises can actually depend on.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-4 animate-slide-up" style="animation-delay: 0.3s;">
+            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 text-sm"><i class="fas fa-check-circle text-xs"></i> 10+ Years in IT</span>
+            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-50 text-purple-600 text-sm"><i class="fas fa-check-circle text-xs"></i> MBA, Liverpool Business School</span>
+            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-pink-50 text-pink-600 text-sm"><i class="fas fa-check-circle text-xs"></i> Enterprise AI Strategy</span>
           </div>
         </div>
 
@@ -301,40 +202,24 @@
           <div class="gradient-border p-8 rounded-2xl bg-white/80 shadow-lg shadow-indigo-100">
             <div class="space-y-4">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600">
-                  <i class="fas fa-brain"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold text-slate-800">Agentic AI</div>
-                  <div class="text-xs text-slate-400">Autonomous agent systems</div>
-                </div>
+                <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600"><i class="fas fa-sitemap"></i></div>
+                <div><div class="text-sm font-semibold text-slate-800">Agent Harness Engineering</div><div class="text-xs text-slate-400">Context resets, structured handoffs, generator-evaluator loops</div></div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
-                  <i class="fas fa-database"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold text-slate-800">Vector Databases</div>
-                  <div class="text-xs text-slate-400">ChromaDB, embeddings</div>
-                </div>
+                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600"><i class="fas fa-project-diagram"></i></div>
+                <div><div class="text-sm font-semibold text-slate-800">Multi-Agent Orchestration</div><div class="text-xs text-slate-400">Planner → generator → evaluator, A2A & MCP protocols</div></div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center text-pink-600">
-                  <i class="fas fa-robot"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold text-slate-800">LLM Integration</div>
-                  <div class="text-xs text-slate-400">MCP, RAG, fine-tuning</div>
-                </div>
+                <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center text-pink-600"><i class="fas fa-layer-group"></i></div>
+                <div><div class="text-sm font-semibold text-slate-800">Context Engineering</div><div class="text-xs text-slate-400">Compaction, RAG, structured artifacts for long-running agents</div></div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
-                  <i class="fas fa-cloud"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold text-slate-800">Cloud & DevOps</div>
-                  <div class="text-xs text-slate-400">AWS, CI/CD, Docker</div>
-                </div>
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600"><i class="fas fa-shield-alt"></i></div>
+                <div><div class="text-sm font-semibold text-slate-800">AI Governance & Safety</div><div class="text-xs text-slate-400">EU AI Act, NIST AI RMF, ISO/IEC 42001 alignment</div></div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600"><i class="fas fa-cloud"></i></div>
+                <div><div class="text-sm font-semibold text-slate-800">LLM Platform Infrastructure</div><div class="text-xs text-slate-400">AWS Bedrock, Azure OpenAI, Vertex AI, vector stores</div></div>
               </div>
             </div>
           </div>
@@ -343,237 +228,255 @@
     </div>
   </section>
 
-  <!-- ═══════════════ SKILLS ═══════════════ -->
-  <section id="skills" class="py-24 relative bg-white/60">
+  <!-- ═══════════════ ARCHITECTURE EXPERTISE ═══════════════ -->
+  <section id="architecture" class="py-24 relative bg-white/60">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">Expertise</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Skills & Technologies
-        </h2>
+        <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">Architecture</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">What I Design & Build</h2>
+        <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+          From high-level system design to low-level implementation — the complete stack that turns frontier models into production-grade autonomous systems.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Languages -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 text-xl mb-4">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-800 mb-4">Languages</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm border border-indigo-100">Python</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm border border-purple-100">TypeScript</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-pink-50 text-pink-600 text-sm border border-pink-100">SQL</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-sm border border-emerald-100">Bash</span>
-          </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Agent Harness Engineering -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 text-xl mb-4"><i class="fas fa-sitemap"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Agent Harness Engineering</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Designing the scaffolding around frontier models — context resets, structured handoffs, generator-evaluator
+            loops, and sprint contracts that keep long-running agents coherent across multi-hour sessions. Inspired by
+            Anthropic's harness design research and GAN-inspired generator-evaluator patterns.
+          </p>
         </div>
 
-        <!-- AI & ML -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 text-xl mb-4">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-800 mb-4">AI & ML</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm border border-indigo-100">LangChain</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm border border-purple-100">LangGraph</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-pink-50 text-pink-600 text-sm border border-pink-100">CrewAI</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-sm border border-emerald-100">OpenAI</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-cyan-50 text-cyan-600 text-sm border border-cyan-100">MCP</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-rose-50 text-rose-600 text-sm border border-rose-100">RAG</span>
-          </div>
+        <!-- Loop Engineering -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 text-xl mb-4"><i class="fas fa-sync-alt"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Loop Engineering</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Building self-correcting agent loops where an evaluator agent grades outputs against concrete criteria,
+            feeds critique back to the generator, and iterates until quality thresholds are met. Turning subjective
+            judgments into gradable, testable contracts.
+          </p>
         </div>
 
-        <!-- Tools & Infra -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 text-xl mb-4">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-slate-800 mb-4">Tools & Infrastructure</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm border border-indigo-100">Docker</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm border border-purple-100">AWS</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-pink-50 text-pink-600 text-sm border border-pink-100">Git</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-sm border border-emerald-100">ChromaDB</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-cyan-50 text-cyan-600 text-sm border border-cyan-100">PostgreSQL</span>
-            <span class="skill-tag px-3 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm border border-amber-100">CI/CD</span>
-          </div>
+        <!-- Context Engineering -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 text-xl mb-4"><i class="fas fa-layer-group"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Context Engineering</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Managing what enters the context window, when, and in what form. Compaction, retrieval-augmented context,
+            and structured artifacts — progress files, feature lists — that let agents pick up where the last session
+            left off without guessing.
+          </p>
+        </div>
+
+        <!-- Multi-Agent Orchestration -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl mb-4"><i class="fas fa-project-diagram"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Multi-Agent Orchestration</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Planner → generator → evaluator architectures, A2A and MCP protocols, and frameworks like LangGraph, CrewAI,
+            and the OpenAI Agents SDK. Orchestrating specialized agents that each own a slice of the SDLC — and making
+            sure they communicate without losing context.
+          </p>
+        </div>
+
+        <!-- LLM Platform & Vector Infrastructure -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 text-xl mb-4"><i class="fas fa-database"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">LLM Platform & Vector Infrastructure</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            AWS Bedrock, Azure OpenAI & Foundry, Vertex AI for model serving. Pinecone, FAISS, ChromaDB, and Azure AI
+            Search for retrieval. Building the retrieval and serving layer that production agents depend on — with
+            observability, fallbacks, and cost controls built in.
+          </p>
+        </div>
+
+        <!-- Business Impact -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600 text-xl mb-4"><i class="fas fa-chart-line"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Business Impact Engineering</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Bridging the gap between AI capability and business outcomes. Translating model metrics into ROI, designing
+            KPIs that matter to the C-suite, and building dashboards that make AI performance legible to non-technical
+            stakeholders. The best AI systems are the ones nobody notices — because they just work.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Stack Badges -->
+      <div class="mt-12 text-center">
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm border border-indigo-100">Python</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm border border-purple-100">FastAPI</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-pink-50 text-pink-600 text-sm border border-pink-100">LangGraph</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-sm border border-emerald-100">LangChain</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm border border-amber-100">CrewAI</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-cyan-50 text-cyan-600 text-sm border border-cyan-100">MCP</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm border border-indigo-100">AWS Bedrock</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm border border-purple-100">Azure OpenAI</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-pink-50 text-pink-600 text-sm border border-pink-100">Vertex AI</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-sm border border-emerald-100">Pinecone</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm border border-amber-100">ChromaDB</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-cyan-50 text-cyan-600 text-sm border border-cyan-100">Docker</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-rose-50 text-rose-600 text-sm border border-rose-100">Pydantic AI</span>
+          <span class="skill-tag px-3 py-1.5 rounded-full bg-violet-50 text-violet-600 text-sm border border-violet-100">OpenAI Agents SDK</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ PROJECTS ═══════════════ -->
-  <section id="projects" class="py-24 relative">
+  <!-- ═══════════════ OPEN SOURCE ═══════════════ -->
+  <section id="opensource" class="py-24 relative">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">Open Source</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Featured Contributions
-        </h2>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Active Collaborations</h2>
         <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
-          Active contributor to some of the most impactful AI open-source projects.
-          Every PR is a fix that matters — not a drive-by change.
+          Contributing to the AI infrastructure that the ecosystem runs on — fixing real bugs in production-grade agentic frameworks, LLM platforms, and vector databases. The kind of issues that silently corrupt data, break under concurrency, or surface only at scale.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- ChromaDB -->
+        <!-- NousResearch/hermes-agent -->
         <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.1s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center">
-              <i class="fab fa-python text-indigo-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">ChromaDB</h3>
-              <span class="text-xs text-slate-400">Vector Database</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-cyan-100 flex items-center justify-center"><i class="fas fa-robot text-cyan-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">NousResearch / hermes-agent</h3><span class="text-xs text-slate-400">Agentic AI Framework</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            8 PRs — FTS5 corruption fixes, pysqlite3-binary removal, API normalization, and more.
-          </p>
-          <a href="https://github.com/chroma-core/chroma/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View PRs <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">Agent reliability, profile isolation, TUI stability, and cross-platform compatibility. Actively collaborating with the NousResearch team on core agent loop correctness.</p>
+          <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
 
-        <!-- Dify -->
+        <!-- langgenius/dify -->
         <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.2s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
-              <i class="fas fa-robot text-purple-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">Dify</h3>
-              <span class="text-xs text-slate-400">LLM App Platform</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center"><i class="fas fa-robot text-purple-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">langgenius / dify</h3><span class="text-xs text-slate-400">LLM Application Platform</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            7 PRs — MCP client fixes, Qwen/vLLM compatibility, PG replication, agent file filtering.
-          </p>
-          <a href="https://github.com/langgenius/dify/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View PRs <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">Agent node defaults, MCP client resilience, email validation, file handling, and database migration fixes across the platform's agent and API layers.</p>
+          <a href="https://github.com/langgenius/dify/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
 
-        <!-- OpenWorker -->
+        <!-- openai/openai-python -->
         <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.3s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center">
-              <i class="fas fa-users text-pink-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">OpenWorker</h3>
-              <span class="text-xs text-slate-400">AI Agent Framework</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center"><i class="fas fa-code text-emerald-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">openai / openai-python</h3><span class="text-xs text-slate-400">Official Python SDK</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            5 PRs — MCP streamable HTTP, Qwen auth guidance, CI coverage, exec-risk tool filtering.
-          </p>
-          <a href="https://github.com/andrewyng/openworker/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View PRs <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">SDK correctness and edge case handling — streaming accumulator fixes, NO_PROXY sanitization, and tool-call index coalescing for speculative decoding.</p>
+          <a href="https://github.com/openai/openai-python/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
 
-        <!-- LangChain -->
+        <!-- pydantic/pydantic-ai -->
         <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.4s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
-              <i class="fas fa-link text-emerald-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">LangChain</h3>
-              <span class="text-xs text-slate-400">LLM Framework</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center"><i class="fas fa-shield-alt text-rose-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">pydantic / pydantic-ai</h3><span class="text-xs text-slate-400">Agentic AI Framework</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            Contributions to the core Python library — agent tooling, integrations, and bug fixes.
-          </p>
-          <a href="https://github.com/langchain-ai/langchain/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View PRs <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">Agent framework reliability and type-safe agent interactions. Collaborating on the Pydantic-powered agent ecosystem.</p>
+          <a href="https://github.com/pydantic/pydantic-ai/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
 
-        <!-- Hermes Agent -->
+        <!-- chroma-core/chroma -->
         <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.5s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-100 flex items-center justify-center">
-              <i class="fas fa-robot text-cyan-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">Hermes Agent</h3>
-              <span class="text-xs text-slate-400">Autonomous Coding Agent</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center"><i class="fas fa-database text-indigo-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">chroma-core / chroma</h3><span class="text-xs text-slate-400">Vector Database</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            27 PRs — path resolution, Telegram caption retry, progress narration detection, model override rehydration, SSL cipher fix, and more.
-          </p>
-          <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View PRs <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">Embedding function correctness, FTS5 robustness against NUL byte corruption, and dependency hygiene across the AI-native embedding store.</p>
+          <a href="https://github.com/chroma-core/chroma/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+        </div>
+
+        <!-- huggingface/smolagents -->
+        <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.6s;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center"><i class="fas fa-microchip text-amber-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">huggingface / smolagents</h3><span class="text-xs text-slate-400">Lightweight Agent Framework</span></div>
+          </div>
+          <p class="text-slate-600 text-sm mb-4">Code agent reliability and tool-use edge cases — including a critical GIL-deadlock fix for arbitrary-precision integer timeouts and managed-agent summary leak prevention.</p>
+          <a href="https://github.com/huggingface/smolagents/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+        </div>
+
+        <!-- crewAI -->
+        <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.7s;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center"><i class="fas fa-users text-pink-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">crewAIInc / crewAI</h3><span class="text-xs text-slate-400">Multi-Agent Orchestration</span></div>
+          </div>
+          <p class="text-slate-600 text-sm mb-4">Multi-agent execution stability and task coordination — fixing asyncio event loop crashes in async native tool paths.</p>
+          <a href="https://github.com/crewAIInc/crewAI/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+        </div>
+
+        <!-- mem0 -->
+        <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.8s;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center"><i class="fas fa-brain text-violet-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">mem0ai / mem0</h3><span class="text-xs text-slate-400">Memory Layer for AI Agents</span></div>
+          </div>
+          <p class="text-slate-600 text-sm mb-4">Agent memory retrieval and persistence correctness — auto-propagating embedding dimensions from embedder to vector store config.</p>
+          <a href="https://github.com/mem0ai/mem0/pulls?q=is%3Apr+author%3Arkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View Contributions <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
 
         <!-- More repos -->
-        <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.6s;">
+        <div class="project-card p-6 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm" style="animation-delay: 0.9s;">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
-              <i class="fas fa-folder-open text-amber-600 text-lg"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-slate-800">And More</h3>
-              <span class="text-xs text-slate-400">Across the ecosystem</span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center"><i class="fas fa-folder-open text-slate-600 text-lg"></i></div>
+            <div><h3 class="font-semibold text-slate-800">And More</h3><span class="text-xs text-slate-400">Across the AI ecosystem</span></div>
           </div>
-          <p class="text-slate-600 text-sm mb-4">
-            Contributions to Mem0, MLflow, SmolAgents, Cognee, Firecrawl, and other AI infrastructure projects.
-          </p>
-          <a href="https://github.com/rkfshakti" target="_blank"
-             class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">
-            View All <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
+          <p class="text-slate-600 text-sm mb-4">Also contributing to Firecrawl (web data for AI), Cognee (cognitive graph memory), OpenWorker (agentic workflows), and other foundational AI infrastructure projects.</p>
+          <a href="https://github.com/rkfshakti" target="_blank" class="text-indigo-600 text-sm font-medium hover:text-indigo-500 transition-colors">View All <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ STATS ═══════════════ -->
-  <section id="stats" class="py-24 relative bg-white/60">
+  <!-- ═══════════════ GOVERNANCE ═══════════════ -->
+  <section id="governance" class="py-24 relative bg-white/60">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">By the Numbers</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Impact Metrics
-        </h2>
+        <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">Governance & Ethics</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">AI That's Accountable</h2>
+        <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+          An architect who ships without a governance layer is shipping liability. I design AI systems that are not just capable but accountable — built to pass audit, survive regulatory scrutiny, and earn trust.
+        </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center card-hover shadow-sm">
-          <div class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">101+</div>
-          <div class="text-slate-500 text-sm mt-2">Open Source PRs</div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 text-xl mb-4"><i class="fas fa-gavel"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Regulatory Alignment</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Designing against the frameworks that matter in 2026: the <strong>EU AI Act</strong> (risk-tiered obligations, high-risk system conformity assessments), the <strong>NIST AI Risk Management Framework</strong> (Govern–Map–Measure–Manage lifecycle), and <strong>ISO/IEC 42001</strong> (the first certifiable AI management system standard). Compliance is designed in from day one — not bolted on after launch.
+          </p>
         </div>
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center card-hover shadow-sm">
-          <div class="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">10</div>
-          <div class="text-slate-500 text-sm mt-2">Merged PRs</div>
-        </div>
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center card-hover shadow-sm">
-          <div class="text-4xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">100%</div>
-          <div class="text-slate-500 text-sm mt-2">Python Focus</div>
-        </div>
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 text-center card-hover shadow-sm">
-          <div class="text-4xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">2024</div>
-          <div class="text-slate-500 text-sm mt-2">Started Contributing</div>
-        </div>
-      </div>
 
-      <!-- GitHub streak / activity placeholder -->
-      <div class="mt-12 text-center">
-        <img src="https://github-readme-stats.vercel.app/api?username=rkfshakti&show_icons=true&count_private=true&hide_border=true&bg_color=ffffff&title_color=4f46e5&text_color=64748b&icon_color=4f46e5&hide_rank=true"
-             alt="GitHub Stats" class="inline-block rounded-2xl shadow-sm" loading="lazy" />
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 text-xl mb-4"><i class="fas fa-balance-scale"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Responsible AI by Design</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Bias detection and mitigation in training data and model outputs. Human-in-the-loop checkpoints for high-stakes decisions. Explainability and audit trails so every automated decision can be traced, justified, and challenged. Model cards and system documentation as living artifacts.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 text-xl mb-4"><i class="fas fa-shield-virus"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Agent Containment & Safety</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            As agents grow more autonomous, blast radius grows with them. I design containment boundaries, permission scoping, and tool-use guardrails so an agent that goes off-script cannot take production systems with it. Inspired by Anthropic's containment research for Claude Code and Cowork.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-hover shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl mb-4"><i class="fas fa-lock"></i></div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-3">Data Governance & Transparency</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            PII handling, retention policies, and data lineage that satisfy GDPR and sector-specific privacy regimes. Retrieval pipelines that respect access controls — no leaking privileged context across tenants. AI-generated content labelling and chatbot disclosure aligned with the EU AI Act's transparency obligations.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -583,33 +486,27 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mx-auto text-center">
         <span class="text-indigo-600 font-semibold text-sm tracking-widest uppercase">Connect</span>
-        <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Let's Build Something
-        </h2>
+        <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Let's Build Something That Matters</h2>
         <p class="text-slate-500 mb-10">
-          I'm always open to interesting collaborations, open-source discussions, or just a good conversation about AI.
+          Open to architecture challenges, enterprise AI strategy, freelance engagements, or startup ideas in the GenAI space. If you're building something that matters, let's talk.
         </p>
 
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://github.com/rkfshakti" target="_blank"
-             class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
+          <a href="https://github.com/rkfshakti" target="_blank" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
             <i class="fab fa-github text-xl text-slate-500 group-hover:text-indigo-600 transition-colors"></i>
             <span class="text-slate-700 group-hover:text-indigo-600 transition-colors">@rkfshakti</span>
           </a>
-          <a href="mailto:rkfshakti@gmail.com"
-             class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
+          <a href="mailto:rkfshakti@gmail.com" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
             <i class="fas fa-envelope text-xl text-slate-500 group-hover:text-indigo-600 transition-colors"></i>
             <span class="text-slate-700 group-hover:text-indigo-600 transition-colors">rkfshakti@gmail.com</span>
           </a>
-          <a href="https://x.com/rkfshakti" target="_blank"
-             class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
-            <i class="fab fa-x-twitter text-xl text-slate-500 group-hover:text-indigo-600 transition-colors"></i>
-            <span class="text-slate-700 group-hover:text-indigo-600 transition-colors">@rkfshakti</span>
+          <a href="https://www.linkedin.com/in/oneshaktimohapatra" target="_blank" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-all group shadow-sm">
+            <i class="fab fa-linkedin text-xl text-slate-500 group-hover:text-indigo-600 transition-colors"></i>
+            <span class="text-slate-700 group-hover:text-indigo-600 transition-colors">LinkedIn</span>
           </a>
-          <a href="https://github.com/sponsors/rkfshakti" target="_blank"
-             class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 transition-all group shadow-sm">
+          <a href="https://github.com/sponsors/rkfshakti" target="_blank" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-pink-300 hover:bg-pink-50 transition-all group shadow-sm">
             <i class="fas fa-heart text-xl text-slate-500 group-hover:text-pink-500 transition-colors"></i>
-            <span class="text-slate-700 group-hover:text-pink-600 transition-colors">Sponsor Me</span>
+            <span class="text-slate-700 group-hover:text-pink-600 transition-colors">Sponsor My Work</span>
           </a>
         </div>
       </div>
@@ -619,12 +516,10 @@
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="py-8 border-t border-slate-200 bg-white/60">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-400 text-sm">
-        &copy; 2026 Shakti Prasad Mohapatra. Built with <i class="fas fa-heart text-pink-500"></i> for open source.
-      </p>
+      <p class="text-slate-400 text-sm">&copy; 2026 Shakti Prasad Mohapatra. <span class="font-medium">Data first. Always.</span></p>
       <div class="flex gap-4 text-slate-400 text-sm">
         <a href="https://github.com/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/oneshaktimohapatra" target="_blank" class="hover:text-indigo-600 transition-colors"><i class="fab fa-linkedin"></i></a>
         <a href="https://x.com/rkfshakti" target="_blank" class="hover:text-indigo-600 transition-colors"><i class="fab fa-x-twitter"></i></a>
         <a href="https://github.com/sponsors/rkfshakti" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fas fa-heart"></i></a>
       </div>
@@ -635,86 +530,41 @@
   <script>
     (function() {
       const keywords = [
-        { text: 'AWS',              color: 'amber'   },
-        { text: 'Microsoft Azure',  color: 'cyan'    },
-        { text: 'GCP',              color: 'emerald' },
-        { text: 'Agentic RAG',      color: 'indigo'  },
-        { text: 'Graph RAG',        color: 'purple'  },
-        { text: 'Computer Vision',  color: 'pink'    },
-        { text: 'STT',              color: 'rose'    },
-        { text: 'TTS',              color: 'violet'  },
-        { text: 'Governance',       color: 'indigo'  },
-        { text: 'LangChain',        color: 'emerald' },
-        { text: 'LangGraph',        color: 'cyan'    },
-        { text: 'CrewAI',           color: 'purple'  },
-        { text: 'MCP',              color: 'indigo'  },
-        { text: 'ChromaDB',         color: 'amber'   },
-        { text: 'OpenAI',           color: 'emerald' },
-        { text: 'Pydantic AI',      color: 'cyan'    },
-        { text: 'Fine-Tuning',      color: 'pink'    },
-        { text: 'RAG',              color: 'violet'  },
-        { text: 'Vector DB',        color: 'rose'    },
-        { text: 'Dify',             color: 'purple'  },
-        { text: 'OpenWorker',       color: 'pink'    },
-        { text: 'Docker',           color: 'cyan'    },
-        { text: 'Kubernetes',       color: 'indigo'  },
-        { text: 'PostgreSQL',       color: 'amber'   },
-        { text: 'CI/CD',            color: 'emerald' },
-        { text: 'GenAI',            color: 'violet'  },
-        { text: 'LLMOps',           color: 'rose'    },
-        { text: 'Prompt Eng.',      color: 'indigo'  },
-        { text: 'Embeddings',       color: 'purple'  },
-        { text: 'Transformers',     color: 'pink'    },
-        { text: 'AutoGen',          color: 'cyan'    },
-        { text: 'SmolAgents',      color: 'emerald' },
-        { text: 'Mem0',             color: 'amber'   },
-        { text: 'MLflow',           color: 'rose'    },
-        { text: 'Firecrawl',        color: 'violet'  },
-        { text: 'Cognee',           color: 'indigo'  },
+        { text: 'AWS Bedrock', color: 'amber' }, { text: 'Azure OpenAI', color: 'cyan' },
+        { text: 'Vertex AI', color: 'emerald' }, { text: 'Agentic RAG', color: 'indigo' },
+        { text: 'Graph RAG', color: 'purple' }, { text: 'Agent Harness', color: 'pink' },
+        { text: 'Loop Engineering', color: 'rose' }, { text: 'Context Engineering', color: 'violet' },
+        { text: 'Governance', color: 'indigo' }, { text: 'EU AI Act', color: 'purple' },
+        { text: 'NIST AI RMF', color: 'cyan' }, { text: 'ISO 42001', color: 'emerald' },
+        { text: 'LangChain', color: 'emerald' }, { text: 'LangGraph', color: 'cyan' },
+        { text: 'CrewAI', color: 'purple' }, { text: 'MCP', color: 'indigo' },
+        { text: 'ChromaDB', color: 'amber' }, { text: 'OpenAI SDK', color: 'emerald' },
+        { text: 'Pydantic AI', color: 'cyan' }, { text: 'RAG', color: 'violet' },
+        { text: 'Vector DB', color: 'rose' }, { text: 'Dify', color: 'purple' },
+        { text: 'Hermes Agent', color: 'pink' }, { text: 'Docker', color: 'cyan' },
+        { text: 'PostgreSQL', color: 'amber' }, { text: 'CI/CD', color: 'emerald' },
+        { text: 'GenAI', color: 'violet' }, { text: 'LLMOps', color: 'rose' },
+        { text: 'Embeddings', color: 'purple' }, { text: 'SmolAgents', color: 'emerald' },
+        { text: 'Mem0', color: 'amber' }, { text: 'Firecrawl', color: 'violet' },
+        { text: 'Cognee', color: 'indigo' }, { text: 'OpenWorker', color: 'pink' },
       ];
-
       const container = document.getElementById('floating-keywords-container');
-      const maxOnScreen = 14;
-      let activeCount = 0;
-
+      const maxOnScreen = 14; let activeCount = 0;
       function spawnKeyword() {
         if (activeCount >= maxOnScreen) return;
-
         const kw = keywords[Math.floor(Math.random() * keywords.length)];
         const el = document.createElement('span');
-        el.className = 'floating-keyword ' + kw.color;
-        el.textContent = kw.text;
-
-        // Random horizontal position (5% to 90% of viewport width)
-        const left = 5 + Math.random() * 85;
-        el.style.left = left + 'vw';
-
-        // Random duration between 12s and 28s
-        const duration = 12 + Math.random() * 16;
-        el.style.animationDuration = duration + 's';
-
-        // Random font size variation
-        const size = 0.85 + Math.random() * 0.6;
-        el.style.fontSize = size + 'rem';
-
+        el.className = 'floating-keyword ' + kw.color; el.textContent = kw.text;
+        el.style.left = (5 + Math.random() * 85) + 'vw';
+        el.style.animationDuration = (12 + Math.random() * 16) + 's';
+        el.style.fontSize = (0.85 + Math.random() * 0.6) + 'rem';
         activeCount++;
-        el.addEventListener('animationend', function() {
-          el.remove();
-          activeCount--;
-        });
-
+        el.addEventListener('animationend', function() { el.remove(); activeCount--; });
         container.appendChild(el);
       }
-
-      // Spawn initial batch with stagger
-      for (let i = 0; i < 6; i++) {
-        setTimeout(spawnKeyword, i * 800);
-      }
-
-      // Continuously spawn new keywords
+      for (let i = 0; i < 6; i++) setTimeout(spawnKeyword, i * 800);
       setInterval(spawnKeyword, 1800);
     })();
   </script>
-
 </body>
 </html>
